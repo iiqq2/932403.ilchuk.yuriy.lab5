@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Личный словарь Юрия Ильчука. Лабораторная работа №5, вариант 17: DOM и localStorage.">
+  <title>Личный словарь — Юрий Ильчук | Лабораторная №5</title>
+  <link rel="icon" type="image/svg+xml" href="images/avatar.svg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <p class="eyebrow" data-i18n="student">Юрий Ильчук · Группа 932403</p>
+      <h1 data-i18n="title">Личный словарь</h1>
+      <p data-i18n="intro">Собирайте новые слова и их переводы. Словарь и настройки сохраняются в этом браузере.</p>
+      <div class="toolbar">
+        <div class="language-switch" role="group" aria-label="Язык интерфейса" id="language-switch">
+          <button type="button" data-language="ru" aria-pressed="true" lang="ru">RU</button>
+          <button type="button" data-language="en" aria-pressed="false" lang="en">EN</button>
+        </div>
+        <button type="button" id="theme-toggle" class="secondary-button" aria-pressed="false" data-i18n="darkTheme">Тёмная тема</button>
+      </div>
+    </div>
+    <img src="images/avatar.svg" alt="Иллюстрированный аватар с книгой" id="avatar" width="240" height="240">
+  </header>
+
+  <main>
+    <section aria-labelledby="add-title">
+      <h2 id="add-title" data-i18n="addTitle">Добавить слово</h2>
+      <form id="word-form" novalidate>
+        <div class="field">
+          <label for="word-input" data-i18n="wordLabel">Слово</label>
+          <input type="text" id="word-input" name="word" placeholder="Например, hello" maxlength="80" required aria-describedby="dictionary-status">
+        </div>
+        <div class="field">
+          <label for="translation-input" data-i18n="translationLabel">Перевод</label>
+          <input type="text" id="translation-input" name="translation" placeholder="Например, привет" maxlength="160" required aria-describedby="dictionary-status">
+        </div>
+        <button type="submit" data-i18n="addWord">Добавить слово</button>
+      </form>
+      <p id="dictionary-status" class="status" role="status" aria-live="polite"></p>
+      <p id="storage-warning" class="storage-warning" role="alert" hidden></p>
+      <noscript><p>Для работы словаря включите JavaScript.</p></noscript>
+    </section>
+
+    <section aria-labelledby="dictionary-title">
+      <div class="section-header">
+        <div>
+          <h2 id="dictionary-title" data-i18n="dictionaryTitle">Мой словарь</h2>
+          <p id="word-count" class="word-count">Слов в словаре: 0</p>
+        </div>
+        <div class="toolbar">
+          <button type="button" id="dictionary-toggle" class="secondary-button" aria-controls="dictionary-panel" aria-expanded="true">Скрыть словарь</button>
+          <button type="button" id="clear-dictionary" class="danger-button" disabled data-i18n="clearDictionary">Очистить словарь</button>
+        </div>
+      </div>
+      <div id="dictionary-panel">
+        <table>
+          <caption class="visually-hidden" data-i18n="tableCaption">Слова и их переводы</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="wordLabel">Слово</th>
+              <th scope="col" data-i18n="translationLabel">Перевод</th>
+              <th scope="col" data-i18n="actions">Действия</th>
+            </tr>
+          </thead>
+          <tbody id="dictionary-body"></tbody>
+        </table>
+        <p id="dictionary-empty" class="empty-state" data-i18n="empty">Словарь пока пуст. Добавьте первое слово с переводом.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p data-i18n="copyright">© 2026 Юрий Ильчук</p>
+  </footer>
+</body>
+</html>

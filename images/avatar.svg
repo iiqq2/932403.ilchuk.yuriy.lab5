@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <title>Иллюстрированный аватар с книгой</title>
+  <circle cx="160" cy="160" r="160" fill="#b4f0f6"/>
+  <circle cx="160" cy="160" r="135" fill="#f2fcff"/>
+  <path d="M62 304c5-63 43-94 98-94s93 31 98 94" fill="#22d3ee"/>
+  <path d="M135 184v39c13 15 37 15 50 0v-39" fill="#e6ad85"/>
+  <ellipse cx="160" cy="142" rx="57" ry="69" fill="#f3c5a3"/>
+  <path d="M104 139c-18-76 26-105 67-99 41 6 66 43 47 104l-13-37c-29 8-54 1-71-14-5 22-17 37-30 46" fill="#153a43"/>
+  <path d="M118 140h31v22h-31zm53 0h31v22h-31z" fill="none" stroke="#153a43" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M149 149h22m-27 31c10 8 22 8 32 0" fill="none" stroke="#153a43" stroke-width="4" stroke-linecap="round"/>
+  <path d="M90 246c24-7 46-3 70 12 24-15 46-19 70-12v59c-26-5-47 0-70 11-23-11-44-16-70-11z" fill="#fff" stroke="#153a43" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M160 258v58m-55-55 35 10m-35 4 35 10m40-14 35-10m-35 24 35-10" fill="none" stroke="#80bdcc" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="64" cy="98" r="24" fill="#087a92"/>
+  <text x="64" y="106" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#fff">A</text>
+  <circle cx="260" cy="180" r="24" fill="#087a92"/>
+  <text x="260" y="187" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#fff">EN</text>
+</svg>
